@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickle House | Homemade Pickles</title>
+    <meta name="description" content="Pickle House makes homemade mango, lemon, garlic, mixed and chilli pickles with fresh ingredients and traditional recipes. Order on WhatsApp.">
+    <meta name="theme-color" content="#5b4d2c">
+    <meta property="og:title" content="Pickle House | Homemade Pickles">
+    <meta property="og:description" content="Pickle House makes homemade mango, lemon, garlic, mixed and chilli pickles with fresh ingredients and traditional recipes. Order on WhatsApp.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ===========================
+        NAVBAR
+=========================== -->
+<nav class="navbar">
+
+    <a class="logo" href="index.html">
+        <span class="logo-icon">🫙</span>
+        <h2>Pickle House</h2>
+    </a>
+
+    <div class="nav-right">
+
+        <!-- WhatsApp (number is set in script.js) -->
+        <a href="https://wa.me/923372068698" class="whatsapp js-wa" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- Cart -->
+        <button type="button" class="cart-btn" aria-label="Open cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" hidden>0</span>
+        </button>
+
+        <!-- Hamburger -->
+        <button type="button" class="hamburger" id="menu-btn" aria-label="Menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</nav>
+
+<!-- Menu (dropdown on mobile, inline links on desktop) -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="#" data-open="aboutPopup">About</a>
+    <a href="#" data-open="contactPopup">Contact</a>
+    <a href="product.html">Products</a>
+</div>
+
+<!-- ===========================
+        ABOUT POPUP
+=========================== -->
+<div class="popup" id="aboutPopup">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-label="About Pickle House">
+        <button type="button" class="close" aria-label="Close">&times;</button>
+        <h2>About Pickle House</h2>
+        <p>
+            Welcome to <strong>Pickle House</strong>! We prepare delicious homemade pickles using fresh ingredients, authentic spices, and traditional recipes. Every jar is packed with love and homemade goodness to bring rich flavors to your table.
+        </p>
+    </div>
+</div>
+
+<!-- ===========================
+        CONTACT POPUP
+=========================== -->
+<div class="popup" id="contactPopup">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-label="Contact us">
+        <button type="button" class="close" aria-label="Close">&times;</button>
+        <h2>Contact Us</h2>
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <span class="js-phone">+92 337 2068698</span>
+        </p>
+        <a href="https://wa.me/923372068698" class="order-btn js-wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp Us
+        </a>
+    </div>
+</div>
+
+<!-- ===========================
+        HERO SECTION
+=========================== -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+        <h1 class="hero-title">Homemade <br> Pickles</h1>
+        <p id="changing-text">Mango Pickle</p>
+        <p id="changing-description">
+            Sweet, tangy and traditionally spiced homemade mango pickle.
+        </p>
+        <div class="hero-buttons">
+            <a href="product.html" class="view-btn">View Products</a>
+        </div>
+    </div>
+
+    <!-- Rotating jars are built in script.js -->
+    <div class="hero-image">
+        <div class="wheel-pos">
+            <div class="wheel" id="wheel"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ===========================
+        CATEGORIES SECTION
+=========================== -->
+<section class="categories">
+
+    <div class="section-header">
+        <h3 class="item">Categories</h3>
+        <a href="product.html" class="see-all">See All <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="slider" id="categoryList"></div>
+
+</section>
+
+<!-- ===========================
+        POPULAR PRODUCTS
+=========================== -->
+<section class="popular-products">
+
+    <div class="section-header">
+        <h3 class="item">Popular Products</h3>
+        <a href="product.html" class="see-all">See All <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="slider" id="popularList"></div>
+
+</section>
+
+<!-- ===========================
+        WHY CHOOSE US
+=========================== -->
+<section class="why-choose-us">
+    <div class="why-header">
+        <h2>Why Choose Us</h2>
+    </div>
+    <div class="why-container">
+        <div class="why-card"><i class="fa-solid fa-seedling"></i><p>Fresh Ingredients</p></div>
+        <div class="why-card"><i class="fa-solid fa-heart"></i><p>Homemade Taste</p></div>
+        <div class="why-card"><i class="fa-solid fa-shield-heart"></i><p>No Preservatives</p></div>
+        <div class="why-card"><i class="fa-solid fa-box-open"></i><p>Hygienic Packing</p></div>
+        <div class="why-card"><i class="fa-solid fa-truck-fast"></i><p>Fast Delivery</p></div>
+    </div>
+</section>
+
+<!-- ===========================
+        CUSTOMER REVIEWS
+=========================== -->
+<section class="reviews">
+
+    <div class="section-header">
+        <h3 class="item">Customer Reviews</h3>
+    </div>
+
+    <div class="slider review-slider" id="reviewList"></div>
+
+    <div class="review-cta">
+        <a href="#" class="view-btn js-review-wa"><i class="fa-brands fa-whatsapp"></i> Share your review</a>
+    </div>
+
+</section>
+
+<!-- ===========================
+        QUOTE SECTION
+=========================== -->
+<section class="quote">
+    <div class="quote-content">
+        <h3>
+            "Every jar is filled with the taste of tradition, love, and authentic homemade flavors."
+        </h3>
+    </div>
+</section>
+
+<!-- ===========================
+        FOOTER
+=========================== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2>🫙 Pickle House</h2>
+            <p>Bringing homemade flavors to your table with fresh ingredients and traditional recipes.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="#" data-open="aboutPopup">About</a>
+            <a href="#" data-open="contactPopup">Contact</a>
+            <a href="product.html">Products</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <a href="#" class="js-facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="#" class="js-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/923372068698" class="js-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">© 2026 Pickle House. All Rights Reserved.</p>
+
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
